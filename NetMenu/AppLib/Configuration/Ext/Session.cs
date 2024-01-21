@@ -66,7 +66,7 @@ namespace NetMenu.AppLib.Configuration.Ext
 
                 List<AppRoles> roleEnumList = appUser.UserRoles.ConvertAll(delegate (string x) { return (AppRoles)Enum.Parse(typeof(AppRoles), x); });
 
-                appUser.SelectedRole = roleEnumList.Min().ToString();
+                appUser.SelectedRole = roleEnumList.Max().ToString();
                 appUser.Login = true;                
 
                 session.SetKey<AppUser>(Literals.SessionKey_AppUser, appUser);
