@@ -44,13 +44,14 @@ namespace NetMenu.Controllers
             }
             else
             {
-                return RedirectToAction(actionName: "Index", controllerName: "Home");
+                return RedirectToAction(actionName: "LoginFail", controllerName: "Account");
             }
         }
 
-        //public IActionResult AccessDenied() => new JsonResult(
-        //    new { StatusCode = StatusCodes.Status403Forbidden, StatusMessage = "Forbidden" }
-        //);
+        public IActionResult LoginFail() => new JsonResult(
+            new { StatusCode = StatusCodes.Status401Unauthorized, StatusMessage = "Unauthorized" }
+        );
+
 
         public IActionResult AccessDenied()
         {
