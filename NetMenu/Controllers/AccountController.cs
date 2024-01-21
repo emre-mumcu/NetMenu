@@ -1,13 +1,11 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using NetMenu.AppLib;
 using NetMenu.AppLib.Auth.Abstract;
-using System.Net.Sockets;
 using NetMenu.AppLib.Configuration.Ext;
-using Microsoft.DotNet.Scaffolding.Shared.Messaging;
+using System.Security.Claims;
 
 namespace NetMenu.Controllers
 {
@@ -32,7 +30,7 @@ namespace NetMenu.Controllers
 
             if(isAuthenticated)
             {
-                var ticket = _authorizer.GetTicket(UserName);
+                var ticket = await _authorizer.GetTicket(UserName);
 
                 HttpContext.Session.CreateUserSession(ticket.Principal);
 

@@ -4,5 +4,5 @@ namespace NetMenu.AppLib.Auth.Abstract;
 
 public interface IAuthorize
 {
-    public AuthenticationTicket GetTicket(string UserName);
+    public Task<AuthenticationTicket> GetTicket(string UserName);
 }

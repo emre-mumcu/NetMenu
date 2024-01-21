@@ -5,8 +5,8 @@ using NetMenu.AppLib;
 
 namespace NetMenu.Controllers
 {
-    [Authorize(Policy = nameof(AuthorizationPolicyLibrary.UserPolicy))]
-    //[MenuItem]
+    [Authorize(Policy = nameof(AuthorizationPolicyLibrary.AdminPolicy))]
+    [MenuItem]
     public class TestController : Controller
     {
 

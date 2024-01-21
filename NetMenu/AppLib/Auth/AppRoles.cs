@@ -4,10 +4,8 @@
     {
         Guest = 0,
         User = 10,
-        ReportUser = 20,
-        PowerUser = 30,
-        Supervisor = 40,
-        Administrator = 50,
+        Supervisor = 50,
+        Administrator = 90,
         Developer = 99
     }
 }

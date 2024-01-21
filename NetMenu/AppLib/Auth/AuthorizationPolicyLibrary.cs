@@ -33,8 +33,6 @@ namespace NetMenu.AppLib.Auth
                 AppRoles.Developer.ToString(),
                 AppRoles.Administrator.ToString(),
                 AppRoles.Supervisor.ToString(),
-                AppRoles.PowerUser.ToString(),
-                AppRoles.ReportUser.ToString(),
                 AppRoles.User.ToString()
             }))
            .Build();
